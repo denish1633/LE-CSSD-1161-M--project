@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniSavvy - Helping Students Navigate Finances and More</title>
+
+  <!-- Bootstrap 5.3 Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/sideBar.css">
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Sidebar (Navigation Menu) -->
+  <div class="sidebar">
+    <h4 class="text-left logo">UniSavvy</h4>
+    <h6 class="text-left logo">Smart Savings for University Life</h6>
+
+    <!-- Sidebar Links -->
+    <a href="#"><i class="bi bi-house-fill"></i>Home</a>
+    <a href="#"><i class="bi bi-mortarboard-fill"></i>University Overview</a>
+    <a href="#"><i class="bi bi-tag-fill"></i>Discounts</a>
+    <a href="#"><i class="bi bi-heart-fill"></i>Healthcare</a>
+    <a href="#"><i class="bi bi-wallet-fill"></i>Budgeting</a>
+    <a href="#"><i class="bi bi-question-diamond-fill"></i>FAQ</a>
+    <a href="#"><i class="bi bi-info-circle-fill"></i>Help & Contact</a>
+  </div>
+
+  <!-- Menu Button (Hamburger Icon for Mobile) -->
+  <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
+
+  <!-- Main Content -->
+  <section class="hero">
+    <h1>Take Control of Your Finances</h1>
+    <p>Find financial aid, student discounts, and budgeting tools all in one place.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="feature-box">
+      <h2>💰 Financial Aid</h2>
+      <p>Discover scholarships and grants tailored for students.</p>
+    </div>
+    <div class="feature-box">
+      <h2>🛒 Student Discounts</h2>
+      <p>Save on books, food, and daily essentials.</p>
+    </div>
+    <div class="feature-box">
+      <h2>🏥 Healthcare Support</h2>
+      <p>Find affordable insurance and mental health resources.</p>
+    </div>
+  </section>
+
+  <!-- Call-to-Action (CTA) -->
+  <section class="cta">
+    <h2>Join Thousands of Students Saving Money!</h2>
+    <button>Get Started</button>
+  </section>
+
+  <!-- Footer (Sticks to Bottom) -->
+  <footer>
+    &copy; 2025 UniSavvy. All Rights Reserved.
+  </footer>
+
+  <!-- Bootstrap 5.3 JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for Sidebar Toggle -->
+  <script>
+    // Get the menu button and sidebar elements
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    // Add event listener to toggle the sidebar when menu button is clicked
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open'); // Adds/removes 'open' class
+    });
+  </script>
+
+</body>
+</html>
