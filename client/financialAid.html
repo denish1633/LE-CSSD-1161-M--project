@@ -19,52 +19,69 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
+        /* Sidebar Styling */
         .sidebar {
-            width: 260px;
+            width: 250px;
             height: 100vh;
             position: fixed;
-            background-color: #f8f9fc; /* Light Gray Background */
+            background-color: #F1F2F7;
+            color: #333;
             padding: 20px;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
         .sidebar h4 {
-            font-weight: 600;
-            color: #2c2c2c;
+            font-weight: 700;
+            font-size: 22px;
             margin-bottom: 5px;
         }
         .sidebar h6 {
             font-weight: 400;
             font-size: 14px;
-            color: #7a7a7a;
+            color: #666;
             margin-bottom: 20px;
         }
         .sidebar a {
             display: flex;
             align-items: center;
             padding: 12px;
-            font-size: 16px;
-            color: #4a4a4a;
+            color: #333;
             text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease-in-out;
+            font-weight: 500;
+            font-size: 16px;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
         }
         .sidebar a i {
-            font-size: 20px;
+            font-size: 18px;
+            color: #A0A2C5; /* Soft purple for icons */
             margin-right: 12px;
-            color: #A3A3C2; /* Muted Blue Icons */
         }
         .sidebar a:hover {
-            background-color: #e6e6f2; /* Soft Hover Effect */
-            color: #333;
+            background-color: #E0E0E0;
+            color: #000;
         }
+        /* Main Content */
         .content {
-            margin-left: 280px;
+            margin-left: 270px;
             padding: 20px;
+            flex: 1;
+        }
+        .discount-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px;
         }
         .discount-section {
             text-align: center;
-            margin-bottom: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Responsive width */
         }
         .discount-section img {
             width: 150px;
@@ -72,46 +89,69 @@
             margin: 0 auto 10px;
         }
         footer {
-            text-align: center;
             background-color: #343a40;
             color: white;
+            text-align: center;
             padding: 10px;
-            position: fixed;
-            bottom: 0;
             width: 100%;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
+
     <!-- Sidebar Navigation -->
     <div class="sidebar">
-        <h4 class="text-left">UniSavvy</h4>
+        <h4 class="text-left logo">UniSavvy</h4>
         <h6 class="text-left">Smart Savings for University Life</h6>
-        <a href="#"><i class="bi bi-house-fill"></i> Home</a>
-        <a href="#"><i class="bi bi-mortarboard-fill"></i> University Overview</a>
-        <a href="#"><i class="bi bi-tag-fill"></i> Discounts</a>
-        <a href="#"><i class="bi bi-heart-fill"></i> Healthcare</a>
-        <a href="#"><i class="bi bi-wallet-fill"></i> Budgeting</a>
-        <a href="#"><i class="bi bi-question-diamond-fill"></i> FAQ</a>
-        <a href="#"><i class="bi bi-info-circle-fill"></i> Help & Contact</a>
+        <a href="#"><i class="bi bi-house-fill"></i>Home</a>
+        <a href="#"><i class="bi bi-mortarboard-fill"></i>University Overview</a>
+        <a href="#"><i class="bi bi-tag-fill"></i>Discounts</a>
+        <a href="#"><i class="bi bi-heart-fill"></i>Healthcare</a>
+        <a href="#"><i class="bi bi-wallet-fill"></i>Budgeting</a>
+        <a href="#"><i class="bi bi-question-diamond-fill"></i>FAQ</a>
+        <a href="#"><i class="bi bi-info-circle-fill"></i>Help & Contact</a>
     </div>
 
     <!-- Main Content -->
     <div class="content">
-        <h1 class="text-center">Discount Page</h1>
+        <h1 class="text-left">Discount Page</h1>
 
-        <!-- UNiDAYS Discount Section -->
-        <div class="discount-section">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/UNiDAYS_Logo.png" alt="UNiDAYS Logo">
-            <p>UNiDAYS gives discounts and deals for students enrolled in university.</p>
-            <a href="https://www.myunidays.com/CA/en-CA/home?rd=true" target="_blank" class="btn btn-primary">Visit UNiDAYS</a>
-        </div>
+        <!-- Discount Sections in Two Columns -->
+        <div class="discount-container">
 
-        <!-- Spring Financial Discount Section -->
-        <div class="discount-section">
-            <img src="https://www.springfinancial.ca/_nuxt/img/logo.e882b07.svg" alt="Spring Financial Logo">
-            <p>Spring Financial provides student discounts and financial solutions.</p>
-            <a href="https://www.springfinancial.ca/blog/lifestyle/top-student-discounts-in-canada" target="_blank" class="btn btn-success">Visit Spring Financial</a>
+            <!-- UNiDAYS Discount Section -->
+            <div class="discount-section">
+                <img src="https://logovectorseek.com/wp-content/uploads/2020/03/unidays-logo-vector.png" alt="UNiDAYS Logo">
+                <h3>UNiDAYS</h3>
+                <p>UNiDAYS gives discounts and deals for students enrolled in university.</p>
+                <a href="https://www.myunidays.com/CA/en-CA/home?rd=true" target="_blank" class="btn btn-primary">Visit UNiDAYS</a>
+            </div>
+
+            <!-- Spring Financial Discount Section -->
+            <div class="discount-section">
+                <img src="https://www.springfinancial.ca/_nuxt/img/logo.e882b07.svg" alt="Spring Financial Logo">
+                <h3>Spring Financial</h3>
+                <p>Spring Financial provides student discounts and financial solutions.</p>
+                <a href="https://www.springfinancial.ca/blog/lifestyle/top-student-discounts-in-canada" target="_blank" class="btn btn-success">Visit Spring Financial</a>
+            </div>
+
+            <!-- Apple Discount Section -->
+            <div class="discount-section">
+                <img src="data:image/png;base64,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" alt="Apple Logo">
+                <h3>Apple</h3>
+                <p>Exclusive student discounts tech.</p>
+                <a href="https://www.apple.com/us-edu/store?utm_source" target="_blank" class="btn btn-danger">Visit Apple</a>
+            </div>
+
+            <!-- GO Transit Discount Section -->
+            <div class="discount-section">
+                <img src="data:image/png;base64,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" alt="SPC Logo">
+                <h3>GO Transit</h3>
+                <p>Get discounts on travel.</p>
+                <a href="https://www.gotransit.com/en/student-savings" target="_blank" class="btn btn-warning">Visit GO Transit</a>
+            </div>
+
         </div>
     </div>
 
@@ -123,5 +163,6 @@
     <!-- Bootstrap 5.3 JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
