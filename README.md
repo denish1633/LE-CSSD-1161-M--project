@@ -8,6 +8,7 @@ UniSavvy is a project designed to assist university students in managing their f
 - Courage Otabor
 - Nathan
 - Denish
+- Yeabzer
 
 ## Table of Contents
 1. [Purpose and Elevator Pitch](#purpose-and-elevator-pitch)
