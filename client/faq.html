@@ -23,11 +23,16 @@
     h1 {
       text-align: center;
       color: #222;
+      margin-top: 1.5em;
     }
 
     .faq-container {
       max-width: 800px;
-      margin: auto;
+      margin: 2em auto;
+      padding: 1em;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .faq-category {
@@ -65,6 +70,17 @@
     .faq-item:hover {
       background-color: #f1f1f1;
     }
+
+    .menu-toggle {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
   </style>
 </head>
 <body>
@@ -83,8 +99,8 @@
     <a href="financialAid.html"><i class="bi bi-tag-fill"></i>Discounts</a>
     <a href="healthService.html"><i class="bi bi-heart-fill"></i>Healthcare</a>
     <a href="timeManagement.html"><i class="bi bi-wallet-fill"></i>Budgeting</a>
-    <a href="faq.html"><i class="bi bi-question-diamond-fill"></i>FAQ</a>
-    <a href="#"><i class="bi bi-info-circle-fill"></i>Help & Contact</a>
+    <a href="faq.html" class="active"><i class="bi bi-question-diamond-fill"></i>FAQ</a>
+    <a href="contact.html"><i class="bi bi-info-circle-fill"></i>Help & Contact</a>
   </div>
 
   <h1>Frequently Asked Questions</h1>
@@ -94,12 +110,10 @@
     <!-- Category: Financial Aid -->
     <div class="faq-category">
       <h2>Financial Aid</h2>
-
       <div class="faq-item">
         <div class="faq-question">How do I apply for financial aid?</div>
         <div class="faq-answer">Open the UniSavvy app, go to the Financial Aid section, and follow the step-by-step application guide provided.</div>
       </div>
-
       <div class="faq-item">
         <div class="faq-question">Who is eligible for financial aid?</div>
         <div class="faq-answer">Eligibility varies by university, but most aid is based on income level, enrollment status, and residency.</div>
@@ -109,12 +123,10 @@
     <!-- Category: Student Discounts -->
     <div class="faq-category">
       <h2>Student Discounts</h2>
-
       <div class="faq-item">
         <div class="faq-question">Where can I find student discounts?</div>
         <div class="faq-answer">Check the Discounts section of UniSavvy for updated deals on food, transport, tech, and more.</div>
       </div>
-
       <div class="faq-item">
         <div class="faq-question">Do I need a student card for discounts?</div>
         <div class="faq-answer">Yes, most businesses require a valid student ID to verify your status before offering discounts.</div>
@@ -124,12 +136,10 @@
     <!-- Category: Healthcare -->
     <div class="faq-category">
       <h2>Healthcare & Wellness</h2>
-
       <div class="faq-item">
         <div class="faq-question">Does UniSavvy provide mental health resources?</div>
         <div class="faq-answer">Yes. We list mental health services provided by your school and external free resources for students.</div>
       </div>
-
       <div class="faq-item">
         <div class="faq-question">How do I choose a student health plan?</div>
         <div class="faq-answer">Use our health comparison tool in UniSavvy to compare options based on coverage, price, and provider network.</div>
@@ -139,12 +149,10 @@
     <!-- Category: University Life -->
     <div class="faq-category">
       <h2>University Life</h2>
-
       <div class="faq-item">
         <div class="faq-question">What services does the university provide?</div>
         <div class="faq-answer">Most universities offer tutoring, counseling, career services, and academic advising. UniSavvy links you to them directly.</div>
       </div>
-
       <div class="faq-item">
         <div class="faq-question">How do I find student events?</div>
         <div class="faq-answer">The Events section of UniSavvy connects you to upcoming workshops, socials, and info sessions on your campus.</div>
@@ -154,12 +162,10 @@
     <!-- Category: Using UniSavvy -->
     <div class="faq-category">
       <h2>Using UniSavvy</h2>
-
       <div class="faq-item">
         <div class="faq-question">Is UniSavvy free?</div>
         <div class="faq-answer">Yes. UniSavvy is completely free for students and supported by partnerships with educational institutions.</div>
       </div>
-
       <div class="faq-item">
         <div class="faq-question">How do I report a problem or bug?</div>
         <div class="faq-answer">Use the Help section in the app to submit feedback or report a technical issue directly to our team.</div>
@@ -167,7 +173,7 @@
     </div>
   </div>
 
-  <!-- Sidebar toggle -->
+  <!-- Sidebar + FAQ Toggle Scripts -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const sidebar = document.querySelector('.sidebar');
@@ -176,7 +182,6 @@
       sidebar.classList.toggle('open');
     });
 
-    // FAQ toggle
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', () => {
         item.classList.toggle('open');
