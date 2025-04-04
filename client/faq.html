@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UniSavvy | FAQ</title>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Sidebar CSS -->
+  <link rel="stylesheet" href="css/sideBar.css">
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -62,9 +69,27 @@
 </head>
 <body>
 
+  <!-- Menu Button (Hamburger Icon for Mobile) -->
+  <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
+
+  <!-- Sidebar (Navigation Menu) -->
+  <div class="sidebar">
+    <h4 class="text-left logo">UniSavvy</h4>
+    <h6 class="text-left logo">Smart Savings for University Life</h6>
+
+    <!-- Sidebar Links -->
+    <a href="dashboard.html"><i class="bi bi-house-fill"></i>Home</a>
+    <a href="academicsupport.html"><i class="bi bi-mortarboard-fill"></i>University Overview</a>
+    <a href="financialAid.html"><i class="bi bi-tag-fill"></i>Discounts</a>
+    <a href="healthService.html"><i class="bi bi-heart-fill"></i>Healthcare</a>
+    <a href="timeManagement.html"><i class="bi bi-wallet-fill"></i>Budgeting</a>
+    <a href="faq.html"><i class="bi bi-question-diamond-fill"></i>FAQ</a>
+    <a href="#"><i class="bi bi-info-circle-fill"></i>Help & Contact</a>
+  </div>
+
   <h1>Frequently Asked Questions</h1>
   <div class="faq-container">
-<!-- FAQ page written by Yeabzer -->
+    <!-- FAQ page written by Yeabzer -->
 
     <!-- Category: Financial Aid -->
     <div class="faq-category">
@@ -79,10 +104,9 @@
         <div class="faq-question">Who is eligible for financial aid?</div>
         <div class="faq-answer">Eligibility varies by university, but most aid is based on income level, enrollment status, and residency.</div>
       </div>
-
     </div>
 
-    <!-- Category: Discounts -->
+    <!-- Category: Student Discounts -->
     <div class="faq-category">
       <h2>Student Discounts</h2>
 
@@ -95,7 +119,6 @@
         <div class="faq-question">Do I need a student card for discounts?</div>
         <div class="faq-answer">Yes, most businesses require a valid student ID to verify your status before offering discounts.</div>
       </div>
-
     </div>
 
     <!-- Category: Healthcare -->
@@ -111,7 +134,6 @@
         <div class="faq-question">How do I choose a student health plan?</div>
         <div class="faq-answer">Use our health comparison tool in UniSavvy to compare options based on coverage, price, and provider network.</div>
       </div>
-
     </div>
 
     <!-- Category: University Life -->
@@ -127,7 +149,6 @@
         <div class="faq-question">How do I find student events?</div>
         <div class="faq-answer">The Events section of UniSavvy connects you to upcoming workshops, socials, and info sessions on your campus.</div>
       </div>
-
     </div>
 
     <!-- Category: Using UniSavvy -->
@@ -143,19 +164,24 @@
         <div class="faq-question">How do I report a problem or bug?</div>
         <div class="faq-answer">Use the Help section in the app to submit feedback or report a technical issue directly to our team.</div>
       </div>
-
     </div>
-
   </div>
 
+  <!-- Sidebar toggle -->
   <script>
-    // JavaScript to handle toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+
+    // FAQ toggle
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', () => {
         item.classList.toggle('open');
       });
     });
   </script>
-
 </body>
 </html>
