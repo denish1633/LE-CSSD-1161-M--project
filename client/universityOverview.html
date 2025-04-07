@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniSavvy - Helping Students Navigate Finances and More</title>
+  
+    <!-- Bootstrap 5.3 Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/sideBar.css">
+  
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+      <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .popular-courses, .recent-blogs {
+          text-align: center;
+          padding: 50px 0;
+        }
+        .popular-courses h2, .recent-blogs h2 {
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+        .course-card, .blog-card {
+          text-align: center;
+        }
+        .course-card img, .blog-card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .course-card h5, .blog-card h5 {
+          margin-top: 15px;
+          font-weight: bold;
+        }
+        .course-card a {
+          color: #707FDD;
+          font-weight: bold;
+          text-decoration: none;
+        }
+        .see-all {
+          display: block;
+          margin: 20px auto;
+          padding: 10px 20px;
+          background-color: #707FDD;
+          color: white;
+          border-radius: 5px;
+          text-decoration: none;
+          width: 150px;
+          text-align: center;
+        }
+        .blog-card {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          text-align: left;
+        }
+        .blog-card .blog-meta {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: gray;
+        }
+        .blog-card .blog-meta img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h4 class="text-left logo">UniSavvy</h4>
+        <h6 class="text-left logo">Smart Savings for University Life</h6>
+        <a href="dashboard.html"><i class="bi bi-house-fill"></i> Home</a>
+        <a href="universityOverview.html"><i class="bi bi-mortarboard-fill"></i> University Overview</a>
+        <a href="financialAid.html"><i class="bi bi-tag-fill"></i> Discounts</a>
+        <a href="healthService.html"><i class="bi bi-heart-fill"></i> Healthcare</a>
+        <a href="faq.html"><i class="bi bi-question-diamond-fill"></i> FAQ</a>
+      </div>
+    
+      <!-- Main Content -->
+      <div class="content" style="margin-left: 280px; padding: 20px;">
+        <h2>University Overview</h2>
+
+        
+        <!-- Popular Courses Section -->
+        <section class="popular-courses">
+          <h2>Most Popular Courses</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="course-card">
+                  <img src="https://www.cumbria.ac.uk/study/courses/undergraduate/user-experience-and-user-interface-uxui-design/UX-UI-Degree-University-BA-849x545.jpg" alt="User Experience Design">
+                  <h5>User Experience Design</h5>
+                  <a href="#">SEE COURSE GUIDE →</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="course-card">
+                  <img src="https://shared.ontariotechu.ca/shared/department/registrar/program-images/FBIT-program-images/2023.04.05-fbit_ug_teachinglabs-404472.jpg" alt="Computer Science">
+                  <h5>Computer Science</h5>
+                  <a href="#">SEE COURSE GUIDE →</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="course-card">
+                  <img src="https://careercitycollege.ca/wp-content/uploads/2024/04/What-to-do-with-a-business-mangement-diploma-2048x1365.png" alt="Business Management">
+                  <h5>Business Management</h5>
+                  <a href="#">SEE COURSE GUIDE →</a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="see-all">SEE ALL →</a>
+          </div>
+        </section>
+    
+        <!-- Recent Blogs Section -->
+        <section class="recent-blogs">
+          <h2>Recent Blogs</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="blog-card">
+                  <img src="https://oeshighschool.b-cdn.net/wp-content/uploads/2022/11/Nov-Blog-1.png" alt="Blog 1">
+                  <h5>How to Choose the Right University for You</h5>
+                  <div class="blog-meta">
+                    <img src="https://miro.medium.com/v2/resize:fit:500/format:webp/0*6mM51WAcx1T600Wh.png" alt="Author 1"> Tracey Wilson &nbsp; August 20, 2022
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="blog-card">
+                  <img src="https://student-cms.prd.timeshighereducation.com/sites/default/files/styles/default/public/istock-547139272.jpg?itok=pR6WAQnu" alt="Blog 2">
+                  <h5>A Day in the Life of a University Student</h5>
+                  <div class="blog-meta">
+                    <img src="https://i0.wp.com/kobowritinglife.com/wp-content/uploads/2021/07/RW3_5.jpg?resize=684%2C1024&ssl=1" alt="Author 2"> Jason Francisco &nbsp; August 20, 2022
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="blog-card">
+                  <img src="https://cdn.prod.website-files.com/667c59abb9df9789d17407a6/667dd29e3589c4f494ef0a16_1135084-grad-web.jpeg" alt="Blog 3">
+                  <h5>Top Scholarships and Grants for University Students</h5>
+                  <div class="blog-meta">
+                    <img src="https://images.squarespace-cdn.com/content/v1/60fac8ad6b35063ee8d8928a/1692105910304-M7P0SN0JXL3FCOMX1TZS/authors_portrait_branding_portrait_photography_bournemouth_07.jpg?format=2500w" alt="Author 3"> Elizabeth Slavin &nbsp; August 20, 2022
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    
+      <!-- Bootstrap 5 JS & Dependencies -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    

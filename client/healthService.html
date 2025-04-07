@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,7 @@
 
   <!-- Bootstrap 5.3 Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  
+
   <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,76 +16,170 @@
 
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+    }
+    .content {
+      margin-left: 280px;
+      padding: 20px;
+      width: 100%;
+    }
+    .popular-courses, .recent-blogs {
+      text-align: center;
+      padding: 50px 0;
+    }
+    .popular-courses h2, .recent-blogs h2 {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .course-card, .blog-card {
+      text-align: center;
+    }
+    .course-card img, .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .course-card h5, .blog-card h5 {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .course-card a {
+      color: #707FDD;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .see-all {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #707FDD;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      width: 150px;
+      text-align: center;
+    }
+    .blog-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    .blog-card .blog-meta {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: gray;
+    }
+    .blog-card .blog-meta img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .header-title {
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
-
-  <!-- Sidebar (Navigation Menu) -->
+  <!-- Sidebar -->
   <div class="sidebar">
     <h4 class="text-left logo">UniSavvy</h4>
     <h6 class="text-left logo">Smart Savings for University Life</h6>
-
-    <!-- Sidebar Links -->
-    <a href="#"><i class="bi bi-house-fill"></i>Home</a>
-    <a href="#"><i class="bi bi-mortarboard-fill"></i>University Overview</a>
-    <a href="#"><i class="bi bi-tag-fill"></i>Discounts</a>
-    <a href="#"><i class="bi bi-heart-fill"></i>Healthcare</a>
-    <a href="#"><i class="bi bi-wallet-fill"></i>Budgeting</a>
-    <a href="#"><i class="bi bi-question-diamond-fill"></i>FAQ</a>
-    <a href="#"><i class="bi bi-info-circle-fill"></i>Help & Contact</a>
+    <a href="dashboard.html"><i class="bi bi-house-fill"></i> Home</a>
+    <a href="universityOverview.html"><i class="bi bi-mortarboard-fill"></i> University Overview</a>
+    <a href="financialAid.html"><i class="bi bi-tag-fill"></i> Discounts</a>
+    <a href="healthService.html"><i class="bi bi-heart-fill"></i> Healthcare</a>
+    <a href="faq.html"><i class="bi bi-question-diamond-fill"></i> FAQ</a>
   </div>
 
-  <!-- Menu Button (Hamburger Icon for Mobile) -->
-  <button class="menu-toggle" id="menu-toggle"><i class="bi bi-list"></i></button>
-
   <!-- Main Content -->
-  <section class="hero">
-    <h1>Take Control of Your Finances</h1>
-    <p>Find financial aid, student discounts, and budgeting tools all in one place.</p>
-  </section>
+  <div class="content">
+    <header class="bg-primary text-white py-5 shadow text-center">
+      <div class="container">
+        <h1 class="display-5 fw-bold">Student Healthcare Resources</h1>
+        <p class="lead">Find affordable insurance and mental health support</p>
+      </div>
+    </header>
 
-  <!-- Features Section -->
-  <section class="features" id="features">
-    <div class="feature-box">
-      <h2>💰 Financial Aid</h2>
-      <p>Discover scholarships and grants tailored for students.</p>
-    </div>
-    <div class="feature-box">
-      <h2>🛒 Student Discounts</h2>
-      <p>Save on books, food, and daily essentials.</p>
-    </div>
-    <div class="feature-box">
-      <h2>🏥 Healthcare Support</h2>
-      <p>Find affordable insurance and mental health resources.</p>
-    </div>
-  </section>
+    <main class="container py-5">
+      <!-- Insurance Section -->
+      <section class="bg-white rounded-4 shadow p-4 mb-5">
+        <h2 class="h4 text-primary mb-3">Affordable Insurance Options</h2>
+        <p>Health insurance is essential for students to stay healthy and protected from unexpected medical costs. Here are some affordable options to explore:</p>
+        <ul class="list-group list-group-flush mt-3">
+          <li class="list-group-item"><strong>University Plans:</strong> Many universities offer health insurance tailored for students. Check with your campus health services.</li>
+          <li class="list-group-item"><strong>Medicaid:</strong> If you have a low income, you may qualify for free or low-cost coverage through Medicaid.</li>
+          <li class="list-group-item"><strong>Marketplace Plans:</strong> Visit <a href="https://www.healthcare.gov" class="link-primary">HealthCare.gov</a> to find affordable plans and see if you qualify for subsidies.</li>
+          <li class="list-group-item"><strong>Parent's Plan:</strong> If you're under 26, you might still be eligible to stay on your parent's health insurance plan.</li>
+        </ul>
+      </section>
 
-  <!-- Call-to-Action (CTA) -->
-  <section class="cta">
-    <h2>Join Thousands of Students Saving Money!</h2>
-    <button>Get Started</button>
-  </section>
+      <!-- Mental Health Section -->
+      <section class="bg-white rounded-4 shadow p-4 mb-5">
+        <h2 class="h4 text-primary mb-3">Mental Health Resources</h2>
+        <p>Your mental health is just as important as your physical health. Here are some resources available to students:</p>
+        <ul class="list-group list-group-flush mt-3">
+          <li class="list-group-item"><strong>Campus Counseling Services:</strong> Most universities offer free or low-cost counseling services for students.</li>
+          <li class="list-group-item"><strong>Crisis Text Line:</strong> Text HOME to 741741 to connect with a trained crisis counselor 24/7.</li>
+          <li class="list-group-item"><strong>Therapy Apps:</strong> Apps like BetterHelp and Talkspace provide remote therapy sessions at student-friendly prices.</li>
+          <li class="list-group-item"><strong>Student Support Groups:</strong> Join on-campus or online peer support groups to connect with others facing similar challenges.</li>
+        </ul>
+      </section>
 
-  <!-- Footer (Sticks to Bottom) -->
-  <footer>
-    &copy; 2025 UniSavvy. All Rights Reserved.
-  </footer>
+      <!-- Recent Blogs Section -->
+      <section class="recent-blogs">
+        <h2>Recent Blogs</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="blog-card">
+                <img src="https://blog.pandai.org/wp-content/uploads/2024/08/c53c75db-images_mental-health-student-studying-rubric.jpg" alt="Blog 1">
+                <h5>Why Mental Health Matters for Students</h5>
+                <div class="blog-meta">
+                  <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Author 1"> Dr. Amy Chen &nbsp; March 15, 2025
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="blog-card">
+                <img src="https://insiderguides.com.au/wp-content/uploads/2023/02/Your-FAQs-about-health-cover-1024x683.jpg" alt="Blog 2">
+                <h5>How to Pick the Right Student Health Insurance Plan</h5>
+                <div class="blog-meta">
+                  <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Author 2"> Marcus Lane &nbsp; April 1, 2025
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="blog-card">
+                <img src="https://www.bu.edu/files/2023/12/how-to-cope-with-finals-stress_feat.jpg" alt="Blog 3">
+                <h5>Managing Stress During Finals Week</h5>
+                <div class="blog-meta">
+                  <img src="https://www.mefa.org/wp-content/uploads/2017/12/931936_492548403-2.jpg" alt="Author 3"> Leah Brooks &nbsp; March 30, 2025
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- Bootstrap 5.3 JS and Popper.js -->
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+      <p class="mb-0">&copy; 2025 UniSavvy. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap 5 JS & Dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-  <!-- JavaScript for Sidebar Toggle -->
-  <script>
-    // Get the menu button and sidebar elements
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.querySelector('.sidebar');
-
-    // Add event listener to toggle the sidebar when menu button is clicked
-    menuToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open'); // Adds/removes 'open' class
-    });
-  </script>
-
 </body>
 </html>
